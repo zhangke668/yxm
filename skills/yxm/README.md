@@ -2,16 +2,17 @@
 
 把一句卡住你的困惑丢给喵。喵不急着回答，先把句子里承重的词拆开，看看里面混着几层意思。很多问题拆着拆着就消失了，剩下的会变成一件能查清的事，或者一个今天就能试的小实验。想通之后，喵把这场对话收成一枚有名字的章，存进你的图鉴。
 
-这是一个 Claude Code 的 skill，需要先装好 Claude Code。
+这是一个 agent skill，Claude Code、Codex、Grok、Trae、豆包等能在电脑上执行命令的 agent 都能装。
 
 ## 安装
 
-把整个 `yxm` 文件夹复制到：
+把这句话发给你的 agent：
 
-- Windows：`C:\Users\<你的用户名>\.claude\skills\yxm\`
-- Mac：`~/.claude/skills/yxm/`
+```text
+帮我安装 https://github.com/zhangke668/yxm
+```
 
-复制完重开 Claude Code，输入 `/yxm`，看到喵的自我介绍就装好了。
+装好后新开一个对话，输入 `/yxm`，看到喵的自我介绍就装好了。详细的安装步骤见仓库首页 <https://github.com/zhangke668/yxm>。
 
 ## 怎么用
 
@@ -32,11 +33,11 @@
 
 用 Obsidian 之类的笔记软件把 `涌现猫` 文件夹当成一个库打开，就能全文搜索、点章名跳转。
 
-喵读这些文件时，内容会跟着对话一起发给 Claude，和你平时用 Claude Code 一样。
+喵读这些文件时，内容会跟着对话一起发给你所用 agent 背后的模型，和你平时用这个 agent 一样。
 
 ## 更新和卸载
 
-- 更新：删掉旧的 `yxm` 文件夹，换成新的。你的图鉴在"文档"里，不受影响。
-- 卸载：删掉 `.claude\skills\yxm\`。想连数据一起清掉，再删"文档"里的 `涌现猫` 文件夹。
+- 更新：`npx -y skills update yxm -g -y`，或者跟 agent 说"帮我更新 yxm"。你的图鉴在"文档"里，不受影响。
+- 卸载：`npx -y skills remove yxm -g -y`，或者直接删掉 skill 目录里的 `yxm` 文件夹。想连数据一起清掉，再删"文档"里的 `涌现猫` 文件夹。
 
 喵陪你拆困惑，不能代替心理咨询或治疗。如果你正处在危机里，请马上联系身边的人，或拨打心理援助热线 12356。
